@@ -1,0 +1,11 @@
+{
+  "description": "Pipeline for parsing jenkins jenkins-oc logs",
+  "processors": [
+    ],
+  "on_failure" : [{
+    "set" : {
+      "field" : "error.message",
+      "value" : "{{ _ingest.on_failure_message }}"
+    }
+  }]
+}

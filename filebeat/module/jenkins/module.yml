@@ -1,0 +1,9 @@
+dashboards:
+- id: Filebeat-jenkins-access-Dashboard
+  file: Filebeat-jenkins-access.json
+- id: Filebeat-jenkins-jenkins-oc-Dashboard
+  file: Filebeat-jenkins-jenkins-oc.json
+- id: Filebeat-jenkins-jenkins-Dashboard
+  file: Filebeat-jenkins-jenkins.json
+- id: Filebeat-jenkins-builds-Dashboard
+  file: Filebeat-jenkins-builds.json

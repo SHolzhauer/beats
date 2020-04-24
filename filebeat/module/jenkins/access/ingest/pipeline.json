@@ -1,0 +1,20 @@
+{
+  "description": "Pipeline for parsing jenkins access logs",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns":[
+          "%{IPORHOST:jenkins.access.remote_ip} - - \\[%{HTTPDATE:jenkins.access.time}\\] \"%{WORD:jenkins.access.method} %{DATA:jenkins.access.path} %{DATA:jenkins.access.http_version}\" %{INT:jenkins.access.response_code} %{INT:jenkins.access.bytes} \"%{DATA:jenkins.access.response_path}\" \"%{GREEDYDATA:jenkins.access.useragent}\""
+        ],
+        "ignore_missing": true
+      }
+    }
+  ],
+  "on_failure" : [{
+    "set" : {
+      "field" : "error.message",
+      "value" : "{{ _ingest.on_failure_message }}"
+    }
+  }]
+}

@@ -1,0 +1,9 @@
+- key: jenkins
+  title: "Jenkins"
+  description: >
+    Jenkins Module
+  fields:
+    - name: jenkins
+      type: group
+      description: >
+      fields:

@@ -1,0 +1,40 @@
+- name: access
+  description: Please add description
+  example: Please add example
+  type: group
+  fields:
+  - name: remote_ip
+    description: Ip address of the client
+    example: 10.32.25.101
+    type: ip
+  - name: time
+    description: Datetime of request
+    example: 24/Apr/2020:18:20:19 +0200
+    type: date
+  - name: method
+    description: HTTP method
+    example: GET
+    type: keyword
+  - name: path
+    description: Path requested
+    example: /path/to/page.jsp
+    type: text
+  - name: http_version
+    description: Http version
+    example: HTTP/1.1
+    type: keyword
+  - name: response_code
+    description: HTTP Response code returned
+    example: 301
+  - name: bytes
+    description: Bytes send in response
+    example: 5643
+    type: integer
+  - name: response_path
+    description: Path responded with
+    example: https://myjenkins.nl/app01/job/
+    type: text
+  - name: useragent
+    description: useragent header from request
+    example: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36
+    type: text

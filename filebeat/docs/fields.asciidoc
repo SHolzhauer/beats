@@ -36,6 +36,7 @@ grouped in the following categories:
 * <<exported-fields-icinga>>
 * <<exported-fields-iis>>
 * <<exported-fields-iptables>>
+* <<exported-fields-jenkins>>
 * <<exported-fields-jolokia-autodiscover>>
 * <<exported-fields-kafka>>
 * <<exported-fields-kibana>>
@@ -20171,6 +20172,122 @@ type: keyword
 The rule set name.
 
 type: keyword
+
+--
+
+[[exported-fields-jenkins]]
+== Jenkins fields
+
+Jenkins Module
+
+
+
+[float]
+=== jenkins
+
+
+
+
+[float]
+=== access
+
+Please add description
+
+
+*`jenkins.access.remote_ip`*::
++
+--
+Ip address of the client
+
+type: ip
+
+example: 10.32.25.101
+
+--
+
+*`jenkins.access.time`*::
++
+--
+Datetime of request
+
+type: date
+
+example: 24/Apr/2020:18:20:19 +0200
+
+--
+
+*`jenkins.access.method`*::
++
+--
+HTTP method
+
+type: keyword
+
+example: GET
+
+--
+
+*`jenkins.access.path`*::
++
+--
+Path requested
+
+type: text
+
+example: /path/to/page.jsp
+
+--
+
+*`jenkins.access.http_version`*::
++
+--
+Http version
+
+type: keyword
+
+example: HTTP/1.1
+
+--
+
+*`jenkins.access.response_code`*::
++
+--
+HTTP Response code returned
+
+example: 301
+
+--
+
+*`jenkins.access.bytes`*::
++
+--
+Bytes send in response
+
+type: integer
+
+example: 5643
+
+--
+
+*`jenkins.access.response_path`*::
++
+--
+Path responded with
+
+type: text
+
+example: https://myjenkins.nl/app01/job/
+
+--
+
+*`jenkins.access.useragent`*::
++
+--
+useragent header from request
+
+type: text
+
+example: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36
 
 --
 
