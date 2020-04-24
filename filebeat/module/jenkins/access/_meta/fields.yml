@@ -1,6 +1,6 @@
 - name: access
-  description: Please add description
-  example: Please add example
+  description: Jenkins access logs
+  example: /var/log/jenkins/access_log
   type: group
   fields:
   - name: remote_ip
